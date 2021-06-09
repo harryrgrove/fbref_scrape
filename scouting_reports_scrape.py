@@ -120,7 +120,5 @@ if __name__ == "__main__":
         except ValueError:  # Filters out players who don't have enough minutes for percentile data
             pass
 
-    path = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))) + \
-           '/data/fbref/scouting_reports.json'
-    with open(path, 'w') as outfile:
+    with open('scouting_reports.json', 'w') as outfile:
         json.dump(reports, outfile)
